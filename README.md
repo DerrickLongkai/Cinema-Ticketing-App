@@ -1,13 +1,8 @@
 #  Cinema Ticketing System
 
-![Android](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Java](https://img.shields.io/badge/Language-Java-007396?style=for-the-badge&logo=java&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-
 A full-stack, enterprise-grade Android cinema ticketing application. This project demonstrates a complete commercial ticket-purchasing workflow, focusing on dynamic UI rendering, algorithmic time scheduling, and a **Thread-Safe seat booking architecture** designed for high-concurrency environments.
 
 ##  Key Features
-
 * **Dynamic Movie Catalog:** Fetches and categorizes "Now in Theaters" and "Coming Soon" movies using a Repository pattern.
 * **Algorithmic Time Scheduling:** Automatically calculates exact movie end times based on dynamic runtime parameters.
 * **Interactive Seat Matrix:** A fully interactive, multi-state (Available, Sold, Selected) seat selection grid generated dynamically.
@@ -15,16 +10,16 @@ A full-stack, enterprise-grade Android cinema ticketing application. This projec
 * **Concurrent Booking Engine (Architecture):** Engineered with thread-safety principles to handle simultaneous booking requests without race conditions.
 
 ---
-
 ##  Screen Previews
-
-*(Note: Replace `link_to_image_x` with the actual image URLs after uploading your screenshots to your repository's `/images` folder)*
-
 | Home Catalog | Dynamic Schedule | Seat Selection | E-Ticket & QR |
 | :---: | :---: | :---: | :---: |
-| ![Home](link_to_image_1) | ![Schedule](link_to_image_2) | ![Seats](link_to_image_3) | ![Ticket](link_to_image_4) |
+| ![Home](screenshots/home.png)| ![Schedule](screenshots/schedule.png) | ![Seats](screenshots/seat.png) | ![Ticket](screenshots/QRcode.png) |
 
----
+##  Tech Stack
+* Language: Java
+* UI Layout: XML, ConstraintLayout, GridLayout, Material Design Tabs
+* Data Structure: Singleton Repository Pattern, RecyclerView Adapters
+* Third-Party Library: ZXing (Core 3.4.1)
 
 ## Core Technical Highlights
 
@@ -58,3 +53,10 @@ Integrated the Google ZXing (Zebra Crossing) library to handle complex data seri
 1. Clone the repository:
    ```bash
    git clone [https://github.com/YourUsername/Cinema-Ticketing-App.git](https://github.com/YourUsername/Cinema-Ticketing-App.git)
+
+2. Open the project in Android Studio.
+
+3. Sync the Gradle files to download necessary dependencies (including com.google.zxing:core:3.4.1).
+
+4. Build and run the application on an emulator or physical device.
+
