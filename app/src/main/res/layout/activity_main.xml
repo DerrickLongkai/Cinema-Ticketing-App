@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <LinearLayout
+        android:id="@+id/layoutTopInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/tvSelectedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvSelectedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today | 09:40"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutLegend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTopInfo"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <View android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/seat_available"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Available" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"/>
+
+        <View android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/seat_sold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sold" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"/>
+
+        <View android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/seat_selected"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Selected" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvScreen"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLegend"
+        android:layout_centerHorizontal="true"
+        android:text="SCREEN"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:background="@drawable/seat_sold"
+        android:padding="4dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutBottomBar"
+        android:layout_below="@id/tvScreen">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <GridLayout
+                android:id="@+id/seatGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"/>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSelectedSeatsInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select seats"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#E91E63"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E91E63"
+                android:layout_alignParentEnd="true"
+                android:enabled="false"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
